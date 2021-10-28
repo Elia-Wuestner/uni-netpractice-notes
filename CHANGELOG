@@ -1,0 +1,5 @@
+commit cc25cad43af8a5bec6191a17dc11bd050add2df5
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 02:30:31 2021 +0200
+
+    build: Add plaintext, changelog, license, tarball and README to output

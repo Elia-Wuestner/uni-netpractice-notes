@@ -1,5 +1,188 @@
+commit 5e751f49b2e1802066a8c79f250434abebcd9d68
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 02:45:51 2021 +0200
+
+    fix: Set `fetch-depth` for checkout of `build`, not `publish` job
+
+commit 89d93ffd407a48972c27c3fcb3aec5367784d32c
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 02:43:09 2021 +0200
+
+    build: Add open commands for EPUB, ODT and plaintext
+
 commit 0bb9a25b228da235260dc9b2d1d5677900f0a84d
 Author: Felix Pojtinger <felix@pojtinger.com>
 Date:   Thu Oct 28 02:38:16 2021 +0200
 
     fix: Checkout full history in GH action
+
+commit c95972267f1488ff4919cc661003ed692337d71b
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 02:35:25 2021 +0200
+
+    build: Drop unused `DESTDIR` env var as there is no install dir, exclude `OUTPUT_DIR` from source package in release
+
+commit cc25cad43af8a5bec6191a17dc11bd050add2df5
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 02:30:31 2021 +0200
+
+    build: Add plaintext, changelog, license, tarball and README to output
+
+commit 0926e9963c09d5932bd4a0a396fbb37552bf0d5e
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 01:47:27 2021 +0200
+
+    build: Add EPUB, ODT and Markdown to the output formats
+
+commit b1b478b374fc4bd1c9488302b9ef9311444fcd58
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 00:43:30 2021 +0200
+
+    build: Refine git protocol strip regex
+
+commit e5695b39ac50f48dbc95cb6d40666daad26e9e08
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 00:31:35 2021 +0200
+
+    fix: Use correct path to extracted release archive
+
+commit 45e55baae9ccb1f1adf9da76f13f38f977230576
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 00:27:06 2021 +0200
+
+    build: Use release artifact explicitly
+
+commit 0b7b846bec7dea755e98cf8a571235d5c508f8ba
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Oct 28 00:11:00 2021 +0200
+
+    build: Add release archive
+
+commit 7816baf8696dcd39157a004186546bf033698a73
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Oct 27 23:56:59 2021 +0200
+
+    feat: Add index to build system
+
+commit 2fd58a6e46b1840362f1495dae7b856a3219da8f
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Oct 27 23:09:39 2021 +0200
+
+    build: Add HTML output and PDF & HTML slides
+
+commit 8d3a6bc6055567cc709a717ae9186e68ee891338
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Oct 26 17:27:19 2021 +0200
+
+    feat: Add protocol for second experiment
+
+commit 1cc8a9dd7d8f120ccd238af89c514aa3be91a0a2
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 20:18:03 2021 +0200
+
+    build: Escape user-supplied variables
+
+commit 15917daae39e24e1dcf240a7e5c4dda83f89cf66
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 20:01:35 2021 +0200
+
+    fix: Correct typos
+
+commit cc288fb42b5c210cb7c612ea12e403d203f99f81
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:50:17 2021 +0200
+
+    build: Set release tag
+
+commit 79dee2c3bf2d4679a715b5e24894417d74a646cb
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:46:10 2021 +0200
+
+    build: Add pandoc
+
+commit 1765b70ef616a19d823a8dbdadee705672473e7e
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:43:30 2021 +0200
+
+    build: Remove unnecessary build steps
+
+commit 2c5eee12fc150d3b75326d038724d608e50ca0b0
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:41:37 2021 +0200
+
+    build: Use `texlive/texlive` base image
+
+commit f37d3407f742bd8c98d93d4dcd95ca83de5633cc
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:30:29 2021 +0200
+
+    fix: Add auto-generated QR code
+
+commit b450af87bcb35dbf0b510bb572b8e24f15c36ed2
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:28:57 2021 +0200
+
+    docs: Add README
+
+commit 3818355f33f5a4be5d8783aa55a846a36e19c873
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 19:27:08 2021 +0200
+
+    feat: Port to Eisvogel
+
+commit ce547862870666bfb0b4b7bfb39eed977f09e402
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 17:59:15 2021 +0200
+
+    refactor: Add frontmatter
+
+commit b22e121216f3fbc1b0e201b0ccec7f62d2f67aee
+Merge: 941ac6d 15e51e5
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Oct 25 16:47:21 2021 +0200
+
+    Merge pull request #1 from JakWai01/main
+    
+    feat: Add "titlepage" and update nmap section
+
+commit 15e51e5b869a37d540c6408916cb6d1248100368
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Mon Oct 25 12:20:08 2021 +0200
+
+    feat: Finish protocol
+
+commit 679e014051cc20937dfb8aabd1af0c9d5597f832
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Thu Oct 21 00:29:51 2021 +0200
+
+    feat: Add "titlepage" and update nmap section
+
+commit 941ac6d46126b05210ec523b0a94b0c1fced2959
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Oct 20 23:04:37 2021 +0200
+
+    feat: Add `Nmap` docs
+
+commit 1f8cd747606bfcf4512bfc61f11244dfba3f70c9
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Oct 20 23:01:32 2021 +0200
+
+    feat: Add descriptions for research results
+
+commit c73026fc87b8a9805c785d634164deb0a2473e16
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Oct 20 22:10:11 2021 +0200
+
+    refactor: Add syntax highlighting to ip config output
+
+commit 5c097e74dbaee6eb4296fb1ed9d20246896c0aaf
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Oct 20 22:02:09 2021 +0200
+
+    feat: Add more pictures and use professor-enforced conventions
+
+commit c9c0f41d3d825ef45451f09f9f6239d902e02997
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Oct 19 21:25:06 2021 +0200
+
+    feat: Add initial notes

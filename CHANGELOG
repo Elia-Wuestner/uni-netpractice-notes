@@ -1,5 +1,5 @@
-commit cc25cad43af8a5bec6191a17dc11bd050add2df5
+commit c95972267f1488ff4919cc661003ed692337d71b
 Author: Felix Pojtinger <felix@pojtinger.com>
-Date:   Thu Oct 28 02:30:31 2021 +0200
+Date:   Thu Oct 28 02:35:25 2021 +0200
 
-    build: Add plaintext, changelog, license, tarball and README to output
+    build: Drop unused `DESTDIR` env var as there is no install dir, exclude `OUTPUT_DIR` from source package in release

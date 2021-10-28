@@ -1,5 +1,5 @@
-commit c95972267f1488ff4919cc661003ed692337d71b
+commit 0bb9a25b228da235260dc9b2d1d5677900f0a84d
 Author: Felix Pojtinger <felix@pojtinger.com>
-Date:   Thu Oct 28 02:35:25 2021 +0200
+Date:   Thu Oct 28 02:38:16 2021 +0200
 
-    build: Drop unused `DESTDIR` env var as there is no install dir, exclude `OUTPUT_DIR` from source package in release
+    fix: Checkout full history in GH action

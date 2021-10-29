@@ -298,22 +298,33 @@ HTTP und TCP
 Initiieren Sie eine HTTP-TCP-Sitzung (beliebige Website) und zeichnen
 Sie die Protokollabläufe auf
 
-Zuerst wird eine DNS-Request getätigt. Daraufhin folgt der
-3-Way-Handshake.
+Zuerst wird ein DNS-Request getätigt. Daraufhin folgt der
+3-Way-Handshake. Dieser ist an der charakteristischen Abfolge SYN,
+SYN-ACK, ACK zu erkennen.
 
-TODO: Add valid image
+[Initiierung einer HTTP-TCP-Sitzung]
 
 Können Sie den 3-Way-Handshake erkennen? Markieren Sie ihn in der
 Dokumentation. Welche TCP-Optionen sind beim Handshake aktiviert und
 welche Bedeutung haben sie?
 
-TODO: Add valid image
+[3-Way-Handshake.]
 
-TODO: Add valid image
+[First segment] Das SYN-Segment enthält die Optionen Maximum Segment
+Size, Window scale, Timestamps und SACK (Selective Acknowledgement).
 
-TODO: Add valid image
+[Second segment] Das SYN-ACK-Segment verwendet wieder die Optionen
+Maximum Segment Size, Window scale, SACK und Timestamps.
 
-TODO: Add valid image
+[Third segment] Das ACK Segment hat nur die Timestamps-Option gesetzt.
+
+Die Maximum Segment Size gibt die maximale Anzahl an Daten in Bytes an,
+die pro Segment akzeptiert werden. Der Window scale factor ist dazu da,
+die zuvor gesetzte maximale window-size über 65535 Bytes zu setzen. Der
+Timestamp misst die derzeitige Roundtrip time. Dadurch kann man den
+retransmission-timer jederzeit neu evaluieren. Selective Acknowledgement
+wird benutzt, um bei verlorenen Segmenten wirklich nur die fehlenden
+retransmitten zu müssen.
 
 Dokumentieren und erläutern Sie die Verwendung der Portnummern bei der
 Dienstanfrage und der Beantwortung des Dienstes durch den Server.
@@ -328,7 +339,8 @@ IP ergibt einen Socket. Wir senden unsere Nachrichten also an den Socket
 Klicken Sie auf der Website ein anderes Bild / Link an. Beobachten und
 dokumentieren Sie: wie verändert sich der TCP-Ablauf?
 
-TODO: Add valid image
+[Es wird eine TCP-Verbindung zur neuen Seite (lwn.net) aufgebaut. Dies
+sieht man anhand des wiederholten TCP-Handshakes.]
 
 MAC
 
@@ -463,8 +475,8 @@ Type: 11 (Time-to-live exceeded)-ICMP-Pakete angezeigt werden.
 
 Nur IP-Pakete, die fragmentiert sind
 
-Mittels eines Filters auf “Must Fragment” wurde hier die TTL
-eingestellt.
+Mittels eines Filters auf “Must Fragment” konnten in dieser Aufgabe nur
+fragmentierte Pakete angezeigt werden.
 
 [Capture von fragmentierten IP-Paketen]
 

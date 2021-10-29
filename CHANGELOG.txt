@@ -1,3 +1,9 @@
+commit 5c3cb23aa149ec8394ea1c7a1c31407189016663
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Oct 29 02:17:21 2021 +0200
+
+    build: Enable correct mimetype detection of CHANGELOG and MIMETYPE
+
 commit 5b821f2cfb00e51f1d71066c1f2bbfa9c5d0d64b
 Author: Felix Pojtinger <felix@pojtinger.com>
 Date:   Fri Oct 29 02:08:06 2021 +0200

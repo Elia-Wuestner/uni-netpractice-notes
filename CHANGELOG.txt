@@ -1,3 +1,9 @@
+commit b9acf3e28851d2bb242e56c7cc0c81d393fab8f9
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Oct 29 23:41:48 2021 +0200
+
+    fix: Update GH repo URL in QR code
+
 commit 61a98e6b8d1e30c618e4704822636654cc070bb6
 Merge: 5c3cb23 930b7ee
 Author: Felix Pojtinger <felix@pojtinger.com>

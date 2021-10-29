@@ -1,3 +1,27 @@
+commit 5b821f2cfb00e51f1d71066c1f2bbfa9c5d0d64b
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Oct 29 02:08:06 2021 +0200
+
+    docs: Add CoC
+
+commit f9ef096803f44b6eea67d9e7681da5e3d27f6c62
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Oct 29 02:07:25 2021 +0200
+
+    build: Add auto-generated open and develop commands
+
+commit b4306a678d5982c96fdf4ff3a3afd82b1f0258de
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Oct 29 02:04:46 2021 +0200
+
+    refactor: Correct typos and hide broken images
+
+commit a669d0043398bc901b4860b54f028b8b1ff647bb
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Oct 29 00:50:44 2021 +0200
+
+    feat: Add rest of descriptions
+
 commit f5f8165f773f5663931600785c253bebc68311b0
 Author: Felix Pojtinger <felix@pojtinger.com>
 Date:   Thu Oct 28 21:38:04 2021 +0000

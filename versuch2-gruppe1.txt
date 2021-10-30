@@ -1,6 +1,6 @@
 Praktikum Rechnernetze
 Jakob Waibel; Daniel Hiller; Elia Wüstner; Felix Pojtinger
-2021-10-19
+2021-10-26
 
 -   1 Einführung
     -   1.1 Mitwirken

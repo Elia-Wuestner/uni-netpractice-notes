@@ -1,3 +1,9 @@
+commit f8f0e5e0dd2bd017af1aa7850fcb8b51e2a29a99
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 8 22:00:13 2021 +0100
+
+    docs: Add third exercise
+
 commit 105cb665f5ac0b251ae46fcf318df53bfdb97c17
 Merge: 07bdba2 6446d6c
 Author: Felix Pojtinger <felix@pojtinger.com>

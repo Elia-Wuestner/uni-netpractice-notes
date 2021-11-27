@@ -44,8 +44,21 @@ SPDX-License-Identifier: AGPL-3.0
 
 IPv6-Addressen
 
+Voreinstellung für die Aufgaben - deaktivieren von IPv4 und aktivivieren
+von IPv6 unter Windows.
+
+Um IPv4 zu deaktivieren und IPv6 zu aktivieren, muss man in den
+Netzwerkeinstellungen zum jeweiligen Adapter über den Pfad
+Systemsteuerung > Netzwerk und Internet > Netzwerkverbindungen > Adaptereinstellungen
+navigieren. Hier wurde der Haken bei IPv6 (Internetprotokoll, Version6)
+gesetzt und bei IPv4 (Internetprotokoll, Version4) entfernt.
+
+[Deaktivieren von IPv4 und aktivieren von IPv6]
+
 Erkunden sie unter Windows und Ubuntu, wie viele IP-Adressen dem
 physikalischen Interface zugeordnet sind.
+
+  Linux
 
     $ ip addr
     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -80,10 +93,16 @@ physikalischen Interface zugeordnet sind.
         inet6 fe80::4e52:62ff:fe0e:548b/64 scope link
            valid_lft forever preferred_lft forever
 
-Es sind 3 Addressen zu finden; eine Host-Local-Addresse, eine
-Global-Unique-Addresse und eine Link-Local-Addresse.
+  Windows
+
+[Anzeigen aller IPv6-Adressen]
+
+Es sind 3 Adressen zu finden; eine Host-Local-Adresse, eine
+Global-Unique-Adresse und eine Link-Local-Adresse.
 
 Nun wird noch IPv4 deaktiviert:
+
+  Linux
 
     $ sudo ip addr delete 141.62.66.5/24 dev enp0s31f6
     $ ip a
@@ -103,8 +122,8 @@ Nun wird noch IPv4 deaktiviert:
 Woraus setzt sich die Link-Lokale-Adresse zusammen und erkennen Sie das
 EUI-64 Format?
 
-Die Link-Lokale-Addresse setzt sich aus Prefix fe80 und 48 Füll-Nullen
-sowie und der mit EUI-64 erweiterten MAC-Addresse zusammen.
+Die Link-Lokale-Adresse setzt sich aus Prefix fe80 und 48 Füll-Nullen,
+sowie der mit EUI-64 erweiterten MAC-Addresse zusammen.
 
 Das EUI-64-Format lässt sich mittels fe0e bei
 2001:470:6d:4d0:4e52:62ff:fe0e:548b/64 und fe80::4e52:62ff:fe0e:548b/64
@@ -114,7 +133,13 @@ Wie lautet der Prefix und die Host-ID der Global-Unicast-Adresse?
 
 Prefix: 2001:470:6d:4d0
 
+  Linux
+
 Host-ID: 4e52:62ff:fe0e:548b
+
+  Windows
+
+Host-ID: 4e52:62ff:fe0e:542b
 
 Testen Sie die Netzwerkverbindung zwischen dem Linux und dem
 Windows-Rechner mit einem Ping (IPv6)?
@@ -134,15 +159,27 @@ Vom Linux-Host zum Windows-Host:
     6 packets transmitted, 6 received, 0% packet loss, time 5078ms
     rtt min/avg/max/mdev = 0.775/0.879/1.327/0.200 ms
 
+Vom Windows-Host zum Linux-Host:
+
+[Ping von Windows zu Linux]
+
 Lassen Sie sich die Routen anzeigen und ermitteln Sie die „Default
 Route“
 
-$ ip -6 route show 2001:470:6d:4d0::/64 dev enp0s31f6 proto kernel
-metric 256 expires 86097sec pref medium fe80::/64 dev enp0s31f6 proto
-kernel metric 256 pref medium default via fe80::fad1:11ff:febd:6612 dev
-enp0s31f6 proto ra metric 1024 expires 1497sec hoplimit 64 pref medium
+  Linux
+
+    $ ip -6 route show
+    2001:470:6d:4d0::/64 dev enp0s31f6 proto kernel metric 256 expires 86097sec pref medium
+    fe80::/64 dev enp0s31f6 proto kernel metric 256 pref medium
+    default via fe80::fad1:11ff:febd:6612 dev enp0s31f6 proto ra metric 1024 expires 1497sec hoplimit 64 pref medium
+
+  Windows
+
+[Ping von Windows zu Linux]
 
 Wer antwortet auf Multicast-Addressen?
+
+  Linux
 
     $ ping6 ff02::1%enp0s31f6 # Stations
     PING ff02::1%enp0s31f6(ff02::1%enp0s31f6) 56 data bytes
@@ -189,21 +226,28 @@ Wer antwortet auf Multicast-Addressen?
     3 packets transmitted, 3 received, +6 duplicates, 0% packet loss, time 2057ms
     rtt min/avg/max/mdev = 0.294/0.466/0.697/0.165 ms
 
-TODO: Add interpretation
+  Windows
 
-Können Sie einzelne Notes anhand der MAC-Adresse (siehe Anhang)
-identifizieren?
+[Ping alle IPv6 Clients]
+
+[Ping IPv6 Multicast]
+
+Mit einem Ping mit Hilfe von ping6 ff02::1%enp0s31f6 lassen sich alle
+Nodes im Netzwerk anpingen. Im Gegensatz dazu antworten bei
+ping6 ff02::2%enp0s31f6 alle Router.
+
+Können Sie einzelne Nodes anhand der MAC-Adresse identifizieren?
 
 Die Station fe80::fad1:11ff:febd:6612 konnte erkannt werden; diese ist
-wie zuvor schon beschrieben (ip -6 route show) das Standardgateway
+wie zuvor schon beschrieben (ip -6 route show) das Standardgateway.
 
 Wieviele unterschiedliche Stationen antworten darauf, oder wieviele
 aktive Komponenten im RN-LAN arbeiten bereits mit IPv6?
 
-Es sind 23 IPv6-Stationen im Netzwerk; die Addressen der Router
+Es sind 23 IPv6-Stationen im Netzwerk; die Adressen der Router
 fe80::fad1:11ff:febd:6612, fe80::268:ebff:feb3:3487 und
-fe80::268:ebff:feb3:3358 finden sich wie oben zu erkennen ist auch im 1.
-ping-Command.
+fe80::268:ebff:feb3:3358 finden sich wie oben zu erkennen ist auch im
+ersten ping-Command.
 
 IPv6 und DNS
 
@@ -211,17 +255,26 @@ Identifizieren Sie mit Wireshark die Pakete mit denen der Router im Netz
 das Prefix mitteilt. Welches Protokoll wird dafür benutzt und um welchen
 Type handelt es sich und wie lautet die Zieladresse des Pakets?
 
-Protokoll: ICMPv6 Type: Router Solicitation bzw. Router Advertisement
+Das verwendete Protkoll ist wie auch in den unten stehenden Screenshots
+zu sehen ICMPv6. Die Types sind Router Solicitation und
+Router Advertisement. Die Zieladresse des Pakets ist die
+Multicast-Adresse ff02::1.
+
+Router Solicitation:
 
 [Router Solicitation]
 
 [Router Solicitation Details: Die Zieladdresse ist ff02::1.]
+
+Router Advertisement:
 
 [Router Advertisement]
 
 [Router Advertisement Details: Die Zieladdresse ist ff02::1.]
 
 Kommen Sie raus in das Internet? Was ist dazu noch erforderlich?
+
+  Linux
 
     praktikum@rn05:~$ ping google.com
     PING google.com(fra24s06-in-x0e.1e100.net (2a00:1450:4001:829::200e)) 56 data bytes
@@ -261,13 +314,24 @@ Wie zu erkennen ist, können DNS-Requests noch nicht beantwortet werden
 (sudo ip addr del 141.62.66.5/24 dev enp0s31f6 deaktiviert hier IPv6),
 wird jedoch die IPv6-Addresse 2a00:1450:4001:829::200e direkt verwendet,
 so kann eine direkte Verbindung (hier z.B. zu Google) aufgebaut werden.
-Um das Internet jedoch im vollem Umfang nutzen zu können, muss noch ein
+Um das Internet jedoch in vollem Umfang nutzen zu können, muss noch ein
 IPv6-fähiger Nameserver eingerichtet werden.
+
+  Windows
+
+Wie bereits unter Linux beschrieben müssen wir einen IPv6-fähigen
+Nameserver hinterlegen. Dies können wir über Windows wieder mit Hilfe
+des GUIs erledigen
+Systemsteuerung > Netzwerk und ethernet > Netzwerkverbindungen > Adaptereinstellungen > Eigenschaften von Internetprotokoll, Version 6 (TCP/IPv6.
+Hier kann im Feld Bevorzugter DNS-Server der DNS-Server hinterlegt und
+mit dem OK-Button bestätigt werden.
+
+[IPv6 DNS Server hinterlegen]
 
 Rufen Sie die Webseite www.kame.net mittels IPv6-Adresse auf (kame.net
 ist manchmal instabil, alternativ versuchen Sie ipv6.google.com)
 
-Zuerst wurde ein IPv6-fähiger Nameserver eingerichtet und getested:
+Zuerst wurde ein IPv6-fähiger Nameserver eingerichtet und getestet:
 
     $ cat /etc/resolv.conf
     nameserver 2001:4860:4860::8888
@@ -290,22 +354,33 @@ Zuerst wurde ein IPv6-fähiger Nameserver eingerichtet und getested:
     1 packets transmitted, 1 received, 0% packet loss, time 0ms
     rtt min/avg/max/mdev = 26.463/26.463/26.463/0.000 ms
 
-www.kame.net zeigt eine drehende Schildkröte:
+www.kame.net zeigt eine sich bewegende Schildkröte:
 
 [Firefox stellt www.kame.net dar]
 
 Mit welcher IPv6-Adresse sie im Netz unterwegs sind, zeigt die Seite
 http://www.heise.de/netze/tools/meine-ip-adresse an
 
+  Linux
+
   Wir haben hierzu den Dienst ifconfig.io verwendet.
 
     $ curl https://ifconfig.io
     2001:470:6d:4d0:4e52:62ff:fe0e:548b
 
+  Windows
+
+  Dieses mal wurde die IPv6-Adresse mit Hilfe von Heise herausgefunden.
+
+[Heise meine IP Adresse]
+
 Welche IPv6-Adresse hat http://www.google.com?
 
     $ dig +noall +answer google.com AAAA
     google.com.     300 IN  AAAA    2a00:1450:4005:802::200e
+
+Die IPv6-Adresse von http://www.google.com lautet
+2a00:1450:4005:802:200e.
 
 Was ist das besondere an der IPv6-Adresse von Facebook?
 
@@ -321,11 +396,19 @@ IPv6-Adresse auf!
     $ dig +noall +answer openldap.org AAAA
     openldap.org.       300 IN  AAAA    2600:3c00:e000:2d3::1
 
+Die IPv6-Adresse von openldap.org lautet 2600:3c00:e000:2d3::1.
+
 Neighbor Solicitation
 
 Starten Sie den „Kabelhai“ und pingen Sie ihren Nachbarrechner. Welches
 Protokoll/Type wird anstatt ARP zur Ermittlung der MAC-Adressen
 verwendet?
+
+  Windows
+
+[Solicitation und Advertisement-Pakete in Wireshark - Windows]
+
+  Linux
 
     $ sudo ip neigh flush dev enp0s31f6
     $ ping6 fe80::fad1:11ff:febd:6612
@@ -336,10 +419,10 @@ verwendet?
     1 packets transmitted, 1 received, 0% packet loss, time 0ms
     rtt min/avg/max/mdev = 0.568/0.568/0.568/0.000 ms
 
-[Solicitation und Advertisement-Pakete in Wireshark]
+[Solicitation und Advertisement-Pakete in Wireshark - Linux]
 
-Hier wird ICMPv6 mit den Types Neighbor Solicitation und Neigbor
-Advertisement verwendet.
+Hier wird ICMPv6 mit den Types Neighbor Solicitation und
+Neigbor Advertisement verwendet.
 
 Welche Zieladresse wird im ersten Neighbour-Paket verwendet und um
 welchen Adresstyp handelt es sich?
@@ -351,6 +434,12 @@ IPv6-Header
 Starten Sie Wireshark und senden sie ein ping an einen IPv6-fähigen
 Webserver (www.ix.de, http://www.heise.de, http://www.kame.net), stoppen
 Sie Wireshark und schauen sich den Trace an.
+
+  Windows
+
+[Ping Heise]
+
+  Linux
 
     $ ping www.kame.net
     PING www.kame.net(2001:2f0:0:8800:226:2dff:fe0b:4311 (2001:2f0:0:8800:226:2dff:fe0b:4311)) 56 data bytes
@@ -379,30 +468,76 @@ schließen.
 Welche Bedeutung haben folgende Felder des IPv6-Headers und gibt es
 Entsprechungen in IPv4?
 
-TODO: Add information about different header fields.
+  ----------------------------------------------------------------------------------------------------
+         Version     Traffic Class         Flow Label        Payload Length     Hop Limit
+  ------ ----------- --------------------- ----------------- ------------------ ----------------------
+  IPv6   Dieses Feld Die Traffic Class ist Mit dem           Das                Das Hop-Limit gibt die
+         ist 4 bits  ein Indikator für     Flow-Label kann   “Payload-Length”   maximale Anzahl an
+         lang und    Class oder Priorität  angegeben werden, Feld gibt die      aufeinanderfolgenden
+         enthält die des IPv6 Packets. So  dass ein IPv6     Länge des          Nodes an, die ein
+         Konstante 6 können einzelne       Paket des selben  Payloads, also die Paket durchlaufen
+         in Binär    Packets mit einer     Flows von Routern Länge des Pakets   darf. Fällt diese Zahl
+         (0110)      höheren Priorität     speziell          ohne               auf 0 wird das Paket
+                     versehen werden.      behandelt werden  Berücksichtigung   verworfen.
+                     Kommt es zu einem     soll. Packets des des Headers an.    
+                     Stau im Router werden gleichen Flows                       
+                     die Packets mit der   werden                               
+                     geringsten Priorität  unverzüglich                         
+                     verworfen.            weitergeleitet.                      
 
-         Version   Traffic   Class   Flow   Label   Payload   Length   Hop Limit
-  ------ --------- --------- ------- ------ ------- --------- -------- -----------
-  IPv6                                                                 
-  IPv4                                                                 
+  IPv4   Dieses Feld IPv6 besitzt das      Das Flow-Label    Bei IPv4 gibt es   Ein Analogon zum
+         ist 4 bits  Traffic Class Feld    ist ebenfalls     statt des          Hop-Limit ist die TTL
+         lang und    nicht. Allerdings     sehr ähnlich zum  “Payload-Length”   (Time-to-Live). Die
+         enthält die erfüllt das “Type of  “Type of Service” Feldes das “Total  TTL funktioniert genau
+         Konstante 4 Service” oder auch    Feld, welches     Length” Feld.      so wie das Hop-Limit
+         in Binär    “Differentiated       einzelne Pakete   Dieses gibt die    auch.
+         (0100)      Services Code Point”  priorisieren      Länge des Pakets,  
+                     genannte Feld eine    kann. Dieses Feld inklusive Header,  
+                     nahezu identische     wurde bei IPv4    an.                
+                     Funtion. Dieses Feld  aber meistens                        
+                     ist auch dazu da,     ignoriert.                           
+                     Packets eine                                               
+                     Priorität zu                                               
+                     verleihen.                                                 
+  ----------------------------------------------------------------------------------------------------
 
 Senden Sie nun ein 5000 Byte großes Paket vom Windows-PC an den
 Ubuntu-PC und schauen sich die Abfolge der Pakete an
 
-    # TODO: Add command with `-l 5000` flag
+Mit ping -6 -l 5000 2001:470:6d:4d0:4e52:62ff:fe0e:548b kann ein 5000
+Byte langer Ping an das Linux-System gesendet werden.
+
+[Sendet 5000 Bytes langen Ping von Windows an Linux]
 
 [Capture der Packets]
 
 Welcher Wert taucht im Next-Header-Feld Ihres IPv6 Headers auf?
 
-Hier tauch der Fragment-Header auf.
+Hier taucht der Fragment-Header for IPv6 auf.
 
 [Details eines gecaptureten Packets]
 
 Welche Bedeutung haben die unterschiedlichen Felder des Fragmentation
 Headers, oder anders gefragt; wie setzt IPv6 die Pakete wieder zusammen?
 
-TODO: Add interpretation
+Next Header: Das Next-Header Feld gibt den Typ des darauffolgenden
+Headers an. In diesem Fall ist der folgende Header ein ICMPv6 Header.
+
+Reserved octet: Das Reserved Octet ist im Moment auf 0 gesetzt und für
+die eventuelle zukünftige Nutzung reserviert.
+
+Fragment Offset: Das Fragment Offset gibt die Startposition der Daten im
+Fragment in Relation zum ursprünglichen Packet an.
+
+More Fragment: More Fragments besteht aus einem einzelnen Bit, welches
+angibt, ob nach dem jetzigen Fragment weitere Fragmente folgen.
+
+Identification Number: Die Identifikationsnummer ist unter allen
+Fragmenten eines Packets die gleiche.
+
+Zusammengesetzt werden die einzelnen Pakete wieder, indem alle Fragmente
+mit gleichem IP-Header nach ihrem Fragment Offset geordnet wieder
+zusammengesetzt werden.
 
 [Details des Fragment-Headers]
 
@@ -413,17 +548,80 @@ zur Konfiguration unter Windows und Ubuntu) zusammen und versuchen hier
 im Versuch die Einstellungen für die „Privacy Extension“ auf beiden
 Rechnern (Windows und Ubuntu) zu realisieren.
 
-TODO: Add research results
+Privacy Extensions sind dafür da, Rückchluss auf Nutzer:innen schwerer
+zu machen, indem der Hostanteil der IPv6-Adressen anonymisiert wird.
+Privacy Extensions entkoppeln Interface Identifier und MAC-Adresse und
+erzeugen diese nahezu zufällig. Mit diesen periodisch wechselnden
+Adressen werden dann ausgehende Verbindungen hergestellt, was den
+Rückschluss auf einzelne Nutzer:innen erschwert. Mit Hilfe der Privacy
+Extensions kann man also nicht mehr einzelne Nutzer:innen
+identifizieren. Was allerdings trotzdem möglich ist, ist das
+Identifizieren über den Präfix, welcher allerdings nur Informationen zum
+Netzwerk bereitstellt. Wenn der Provider den Präfix regelmäßig wechselt,
+dann kann auch die Identifikation über diesen erschwert werden.
+
+  Windows
+
+Unter Windows kann die Privacy Extension mit den zwei folgenden
+Kommandos aktivert werden:
+
+    >netsh interface ipv6 set global randomizeidentifiers=enabled store=active
+    >netsh interface ipv6 set global state=enabled store=active
+
+[Aktivierung der Privacy Extension]
+
+  Linux
+
+Mittels sysctl kann die Privacy Extension aktiviert werden:
+
+    # /etc/sysctl.conf
+    net.ipv6.conf.all.use_tempaddr=2
+    net.ipv6.conf.default.use_tempaddr=2
+
+    $ sudo sysctl -p
 
 Mit welchen IPv6-Adressen sind sie nach dem Aktivieren der Privacy
 Extension im Internet unterwegs?
 
-TODO: Add research results
+  Windows
+
+[IPv6-Adresse nach dem aktivieren der Privacy Extensions]
+
+Wie im oberen Screenshot zu sehen ist, surfen wir mit einer anderen IPv6
+Adresse, welche von Website-Betreibern nicht mehr auf unseren Host
+zurückverfolgt werden kann.
+
+  Linux
+
+  Wir haben hierzu den Dienst ifconfig.io verwendet.
+
+    $ curl https://ifconfig.io
+    2001:7c7:2121:8d00:1902:f308:6c8b:acb7
 
 Feste IPv6-Addressen
 
 Weisen Sie in dieser Aufgabe ihrem Netzwerkinterface eine feste
 sinnvolle (heißt: Der Prefix ist weiterhin gültig) IPv6-Adresse zu.
+
+  Windows
+
+[Setzen der neuen IP]
+
+Mit einem Rechtsklick auf das Netzwerkinterface und dann bei IPv6 die
+Eigenschaften auswählen. Im Menü kann dann eine manuelle IP angegeben
+werden. Wir erhöhen die Hexadezimalzahl im letzen Hextet um eins.
+
+Mit ipconfig kann dann die neue IP-Adresse gesehen werden.
+
+[Neue IP unter ipconfig]
+
+  Linux
+
+Im folgenden kann gesehen werden, wie eine neue IPv6-Adresse zum
+Netzwerkinterface enp0s31f6 hinzugefügt wird. Dafür kann der Befehl
+sudo ip addr add 2001:470:6d:4d0:4e52:62ff:fe0e:548c/64 dev enp0s31f6
+verwendet werden. Die nun hinzugefügte IPv6-Adresse kann dann mit ip a
+betrachtet werden.
 
     $ ip a
     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -457,7 +655,28 @@ sinnvolle (heißt: Der Prefix ist weiterhin gültig) IPv6-Adresse zu.
 
 Warum sollten Sie jetzt alle übrigen IPv6-Adressen löschen?
 
-TODO: Add interpretation
+  Windows
+
+Mit folgendem Command können die Privacy-Extensions deaktiviert und die
+damit einhergehenden IPv6-Adressen entfernt werden.
+
+    netsh interface ipv6 set privacy disabled
+
+Nun wird die alte IPv6-Adresse entfernt.
+
+    netsh interface ipv6 delete address interface="WLAN" address=2003:cd:271d:f879:f4f2:d559:fca9:9fb2 store=active
+
+[Terminal nur noch neue IP]
+
+[Heise IPv6 Adresse]
+
+  Linux
+
+Mit
+sudo ip addr del 2001:470:6d:4d0:4e52:62ff:fe0e:548b/64 dev enp0s31f6
+löschen wir die alte IPv6-Adresse aus dem Netzwerkinterface. Mit ip a
+können wir sehen, dass lediglich die zuvor neu hinzugefügte
+Global-Unicast-Adresse angezeigt wird.
 
     $ sudo ip addr del 2001:470:6d:4d0:4e52:62ff:fe0e:548b/64 dev enp0s31f6
     $ ip a
@@ -474,9 +693,14 @@ TODO: Add interpretation
         inet6 fe80::4e52:62ff:fe0e:548b/64 scope link
            valid_lft forever preferred_lft forever
 
+Man sollte die übrigen IPv6-Adressen löschen, da es sonst eventuell zu
+Problemen beim wählen der Source-IP kommen kann.
+
 Reicht das aus?
 
-TODO: Add interpretation
+Wie auch schon oben erwähnt sollten außerdem noch die Privacy Extensions
+deaktiviert werden. Damit kann sichergestellt werden, dass auch wirklich
+unsere statisch konfigurierte IPv6-Adresse als Source-IP verwendet wird.
 
 Konfigurieren Sie die statische IPv6-Adresse über
 /etc/network/interfaces. Was wird dadurch verhindert? (U. U. müssen sie
@@ -515,15 +739,19 @@ mit ifdown und ifup die Schnittstelle neu starten
     3 packets transmitted, 3 received, 0% packet loss, time 2003ms
     rtt min/avg/max/mdev = 274.357/276.472/280.370/2.759 ms
 
-TODO: Add interpretation
+Wenn man die statische IPv6-Adresse über /etc/network/interfaces setzt,
+ist diese auch nach einem reboot konfiguriert. Einfache Anpassungen über
+ip addr add sind keine persistenten Änderungen.
 
 Mit welcher IPv6-Adresse sind sie jetzt im Netz unterwegs? Die Seite
 http://www.heise.de/netze/tools/meine-ip-adresse gibt Aufschluss.
 
-TODO: Add interpretation
-
     $ curl https://ipconfig.io
     2001:470:6d:4d0:4e52:62ff:fe0e:548c
+
+Nach dem setzen einer statischen IP-Adresse sind wir mit der
+IPv6-Adresse 2001:470:6d:4d0:4e52:62ff:fe0e:548c unterwegs. Das ist die,
+die wir zuvor in /etc/network/interfaces konfiguriert haben.
 
 Lease-Zeiten
 
@@ -533,24 +761,96 @@ maxpreferredlifetime und maxvalidlifetime, die Zeitangaben in Tagen (d),
 Stunden (h), Minuten (m) und Sekunden (s) entgegennehmen. Wie sind diese
 Parameter bei Ihnen gesetzt?
 
-TODO: Add interpretation
+  Windows
+
+    netsh interface ipv6 show privacy
+
+[Get IPv6 Parameter]
+
+Die “Maximale bevorzugte Gültigkeitsdauer” und die “Maximale
+Gültigkeitsdauer” sind zu Beginn auf 7 Tage gesetzt.
+
+  Linux
+
+Mittels sysctl können die Werte abgefragt werden:
+
+    $ sysctl net.ipv6.conf.all.temp_prefered_lft
+    net.ipv6.conf.all.temp_prefered_lft = 86400
+    $ sysctl net.ipv6.conf.all.temp_valid_lft
+    net.ipv6.conf.all.temp_valid_lft = 604800
 
 Halbieren Sie die “Maximale bevorzugte Gültigkeitsdauer” auf den
 Rechnern.
 
-TODO: Add interpretation
+  Windows
+
+    netsh interface ipv6 set privacy maxpreferredlifetime=3d12h
+
+Hiermit können wir maxpreferredlifetime setzen.
+
+[Set IPv6 Parameter]
+
+  Linux
+
+Mittels sysctl kann der Wert halbiert werden:
+
+    net.ipv6.conf.all.temp_prefered_lft = 43200
+
+    $ sudo sysctl -p
 
 Verringern Sie ebenso die Zeitspanne, in der Windows über eine temporäre
 IPv6-Adresse eingehende Pakete empfängt.
 
-TODO: Add interpretation
+  Windows
+
+Dies kann mit folgendem Command erreicht werden:
+
+    netsh interface ipv6 set privacy maxvalidlifetime=3d
+
+  Linux
+
+Mittels sysctl kann der Wert verringert werden:
+
+    net.ipv6.conf.all.temp_valid_lft = 404800
+
+    $ sudo sysctl -p
 
 Stellen Sie den Zusammenhang zwischen Preferred Lifetime und Valid
 Liftime anschaulich dar
 
-TODO: Add interpretation
+Die Preferred Lifetime gibt die Zeitspanne an, in welcher die Adresse
+frei als source und destination Adresse genutzt werden kann. Nach dem
+Ablauf dieser Zeit bekommt die Adresse den “deprecated” Status. Im
+“deprecated” Status kann nur noch mit bestehenden
+Kommunikationsverbindungen kommuniziert werden. Die Valid Lifetime ist
+mindestens so groß wie die Preferred Lifetime. Wenn diese abläuft wird
+die Adresse invalide und kann ab diesem Punkt auch anderen Interfaces
+zugewiesen werden.
 
 OS-Updates
+
+Lässt sich eigentlich Windows über IPv6 updaten? Was sagt Wireshark
+dazu?
+
+  Windows
+
+Unter Windows wurde das Update ohne Probleme installiert. Windows Update
+verfügt über vollen IPv6-Support.
+(https://serverfault.com/questions/844107/windows-server-update-on-ipv6-only-network).
+Dies konnte auch mittels Wireshark validiert werden:
+
+[Wireshark-Capture eines Windows-Updates]
+
+Wie verhält sich Linux im Vergleich dazu? (Anmerkung: Mittels sudo
+apt-get update und sudo apt-get upgrade im Terminal lässt sich Linux
+updaten)
+
+  Linux
+
+Das Linux-Update (bzw. Debian-Update; APT wird verwendet) lässt sich
+auch durchführen. Dies ist natürlich von den verwendeten Spiegelservern
+und deren IPv6-Fähigkeit abhängig, siehe
+https://www.debian.org/mirror/list.
 
     $ sudo ip addr del 141.62.66.5/24 dev enp0s31f6
     $ sudo apt update
@@ -584,3 +884,8 @@ OS-Updates
     Local time is now:      Tue Nov  9 16:52:29 CET 2021.
     Universal Time is now:  Tue Nov  9 15:52:29 UTC 2021.
     Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Ein Blick auf Wireshark zeigt, das auch tatsächlich IPv6 verwendet wird
+(hier mit TLS & einem Spiegelserver der Hochschule Esslingen):
+
+[Wireshark-Capture eines APT-Updates]

@@ -1,3 +1,214 @@
+commit b5bb32495415985db6e2f93a94d0837958241171
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Nov 23 17:08:20 2021 +0100
+
+    feat: Add initial script on cabling
+
+commit 50f8c2069c362cca4da518d50223d67819e1ca0d
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Nov 23 00:17:24 2021 +0100
+
+    docs: Add `./configure` step in contributing info
+
+commit ca190c9e332dd1d792b68d56b321a4dde712710d
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Nov 23 00:04:47 2021 +0100
+
+    build: Pass GH token to Deliverance
+
+commit c609e87b21b0978a763fd393836734a3d29cd84f
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 23:55:06 2021 +0100
+
+    build: Use Deliverance action
+
+commit 2079c8f804f3b680669dc37c73c729906251d661
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 23:42:38 2021 +0100
+
+    fix: Specify OS for action
+
+commit e12926a7cc2bea9757e188b06045e6aa07a24c9d
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 23:41:29 2021 +0100
+
+    build: Use simplified action
+
+commit b3e10740895d8b4d113a6765e23b65785a014712
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 23:25:49 2021 +0100
+
+    build: Add Deliverance-provided Makefile to gitignore
+
+commit cb3bed689ab547cf15434873c07708445b43c600
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 23:25:26 2021 +0100
+
+    feat: Use Deliverance
+
+commit b5a9814dc85cfc57b19b8d6612908f2efc6dda21
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 23:08:48 2021 +0100
+
+    fix: Use correct flag to extract release archive
+
+commit e798978d1629a9017f4978f29a700e10ec9fba18
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 22:57:12 2021 +0100
+
+    fix: Upload all release files
+
+commit 2f9d8b17c955ae9abbdb6bf9e567a7e8217c78cb
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 22:47:40 2021 +0100
+
+    fix: Prevent trying to read the current directory while reading from it when creating the release archive
+
+commit b1f872c2f89c231640072ab069bd280045bb2897
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 22 22:36:17 2021 +0100
+
+    feat: Add Markdown and Gemini support, add .tar.gz release support
+
+commit de5818e79160c535639850e6f06d98b98bf9c3b3
+Merge: fd53d3b 932074c
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Nov 17 00:19:21 2021 +0100
+
+    Merge pull request #8 from JakWai01/main
+    
+    feat: Add final script
+
+commit 932074c97193d441143d2169317ddd9e04de770d
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Tue Nov 16 21:39:42 2021 +0100
+
+    feat: Add some interpretation
+
+commit c6301a6648501faf0b3a8415bd0ca2ca625530ed
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Tue Nov 16 16:47:13 2021 +0100
+
+    feat: Add final script
+
+commit fd53d3b04150ae7e4b47d84330ba6d3f75604712
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Nov 16 16:32:10 2021 +0100
+
+    refactor: Add formatting
+
+commit 54f15f946cef7143d52406461c933a0acfdad066
+Merge: e7a0f1c 5bfb60d
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Nov 16 16:17:09 2021 +0100
+
+    Merge branch 'main' of github.com:pojntfx/uni-netpractice-notes
+
+commit e7a0f1c6b634d42cb71b663423570962691e5f50
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Nov 16 16:17:05 2021 +0100
+
+    feat: Add section on Firewalls
+
+commit 5bfb60d557ab295c570ed8ded70a6ac9e17ecc9b
+Merge: 18dd450 4cbc336
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 15 14:06:11 2021 +0100
+
+    Merge pull request #7 from JakWai01/main
+    
+    fix: Spelling
+
+commit 4cbc336cd28270612fb7663077b8883681d730bd
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Mon Nov 15 13:58:52 2021 +0100
+
+    fix: Gender with : instead of *
+
+commit 1ecde8d3b3d88e64e0b679a5b32d57eb17f5483a
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Mon Nov 15 12:36:31 2021 +0100
+
+    fix: Spelling
+
+commit 18dd45062697cf1d75f626f295f6d190275cc217
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Sun Nov 14 21:48:16 2021 +0100
+
+    feat: Add update wireshark results
+
+commit 39716ac1b899c672278fd4c96e31130a6888f2ef
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Sun Nov 14 21:13:46 2021 +0100
+
+    docs: Add Linux sections on IPv6 privacy extensions
+
+commit f5e347aa43f214401eed3c37ebbbb60c76e8cebd
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Sun Nov 14 20:36:00 2021 +0100
+
+    fix: Use block formatting for pictures
+
+commit 1fa8a3ef42af5ededfad040e571a9d109fdb14c7
+Merge: 4274433 b94fe05
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Sat Nov 13 16:19:33 2021 +0100
+
+    Merge pull request #6 from JakWai01/main
+    
+    feat: Finished 8 TODOs
+
+commit b94fe05080076382d1aa9e67e0f7fdad5454a583
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Sat Nov 13 09:52:27 2021 +0100
+
+    feat: Add missing images
+
+commit fb0d670d662b1c18d13e639dc954b1bddafe56ae
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Fri Nov 12 22:09:44 2021 +0100
+
+    feat: Finish the interpretation of the tasks
+
+commit cfc27d90b7b0bf2604d8ad63bdf385cb809ecbfa
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Fri Nov 12 20:34:27 2021 +0100
+
+    feat: Add answer to fragmentation question
+
+commit e771ee9613573f854bd6d902d011612d1cae1632
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Fri Nov 12 20:15:58 2021 +0100
+
+    feat: Work on experiment 4
+
+commit 42744332f2b35228367fd2409b7fda8d62210f82
+Merge: c3bba58 3cc29ea
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Nov 12 12:43:57 2021 +0100
+
+    Merge pull request #5 from dentremor/main
+    
+    feat: Add windows stuff for task 1-6
+
+commit 3cc29ea4ed09cd84a33475ab27ebe30ce7ad546c
+Author: dentremor <hillerdaniel11@gmail.com>
+Date:   Thu Nov 11 14:32:22 2021 +0100
+
+    fix: Replace capital letters in image name
+
+commit 75c1293bb72ad6d3168c464ccb1b91f1332ee6a2
+Author: dentremor <hillerdaniel11@gmail.com>
+Date:   Wed Nov 10 22:27:23 2021 +0100
+
+    fix: Remove wrong alt text
+
+commit 50b4c6e526d250aaee78baca3f31340a84e308de
+Author: dentremor <hillerdaniel11@gmail.com>
+Date:   Wed Nov 10 18:37:21 2021 +0100
+
+    feat: Add windows stuff for task 1-6
+
 commit c3bba58603424354efef32ee90dab35d7c7f8af3
 Author: Felix Pojtinger <felix@pojtinger.com>
 Date:   Tue Nov 9 17:31:40 2021 +0100

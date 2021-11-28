@@ -199,30 +199,29 @@
 <section id="elektrische-verkabelung" data-number="0.2">
 <h2 data-number="1.2"><span class="header-section-number">1.2</span> Elektrische Verkabelung</h2>
 <p><strong>Die wichtigsten technischen Größen eines Kabels sind die Werte für die Impedanz, die Dämpfung, für das Nebensprechen und das sich daraus zu errechnende ACR.</strong></p>
-<p>TODO: Add answer</p>
 <p><strong>Wie ist der ACR-Wert definiert?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Der ACR-Wert ist die Differenz aus dem NEXT-Wert und der Dämpfung. Damit gibt er das Verhältnis zwischen Nutzsignalstärke und Störsignalstärke an, was auch Signalrauschabstand genannt wird.</p>
 <p><strong>Sollte er hoch oder niedrig sein. Was kann ein ACR-Wert bewirken, der außerhalb der Toleranz liegt.</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Der ACR-Wert sollte möglichst hoch sein. Ein zu niedriger ACR-Wert kann zu Bitfehlern führen.</p>
 <p><strong>Welche weiteren Werte können zur Kabelqualifizierung herangezogen werden?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: * Signallaufzeit * Transferimpedanz * Impedanz * Dämpfung * NEXT</p>
 <p><strong>Erläutern Sie mit wenigen Worten den Begriff der „strukturierten Verkabelung&quot;</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Bei “strukturierter Verkabelung” handelt es sich um ein Konzept zur anwendungsneutralen Verkabelung in und zwischen Gebäuden.</p>
 <p><strong>Sie finden an einem Patchfeld oder einer Dose folgende Gigabit-Verbindung vor. Warum könnte ein derartiges Kabel Probleme verursachen und welche?</strong></p>
-<p>TODO: Add answer (has something to do with twisted pairs)</p>
+<p>TODO: Wenn die Paare direkt nebeneinander liegen hebe ich die Verdrillung auf, die notwendig ist damit sich mit Differenzsignalen die eingestreuten Störungen gegenseitig kompensieren.</p>
 <p><strong>Warum müssen eigentlich alle 8 Adern (=4 Paare) angeschlossen sein? (Stichwort: 4D-PAM5)</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: In Ethernet (10 Mbps) und FastEthernet (100 Mbps) werden unterschiedliche Adern Paare für Senden und Empfangen genutzt. Gigabit Ethernet (1000 Mbps) nimmt dagegen ein Paar für Senden und Empfangen, was gleichzeitiges Senden und Empfangen auf einem Paar ermöglicht. Die Bandbreite von 1 Gbps wird durch das komplette Ausnützen aller 8 Adern erreicht.</p>
 <p><strong>Wieso gibt es 2 Standards für die Kontaktierung von achtpoligen RJ-45-Steckern und Buchsen?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Der Standard T568A von der Electronic Industries Alliance (EIA) und der Telecommunications Industry Association (TIA) ist an den Farbcodes der europäischen Telefonverkabelung angelehnt und wird daher gerne hier genutzt. In den USA gab es bereits den 258A Standard der weltweit verbreitet war. Die EIA übernahm diesen und nannte ihn um in T568B.</p>
 </section>
 <section id="optische-verkabelung" data-number="0.3">
 <h2 data-number="1.3"><span class="header-section-number">1.3</span> Optische Verkabelung</h2>
 <p><strong>Welche Messgrößen sind bei einem optischen Kabel im Vergleich zu den Messgrößen eines elektrischen Kabels sinnvoll?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: * Attenuation die den Lichtverlust aufgrund von z.B. Absorption, Biegen und Streuung angibt. * Chromatische Dispersion. Sie kann gemessen werden in dem man die Dauer misst, wie lange unterschiedliche Wellenlängen benötigen um eine Ader zu durchlaufen * Reflektionen</p>
 <p><strong>Was ist ein OTDR (zur Qualifizierung optischer Verbindungen)?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Mittels dem Optischen Zeitbereichsreflektometrie-Verfahren werden Lauflängen und Reflexionscharakteristika von Elektromagnetischen- und Lichtwellen analysiert.</p>
 <p><strong>Wozu wird es benötigt</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Wird z.B. verwendet um die Entfernung zu Fehlerstellen an Spleißen und Verbindern zu erfassen.</p>
 </section>
 <section id="aufgaben-für-die-kabel-gruppen" data-number="0.4">
 <h2 data-number="1.4"><span class="header-section-number">1.4</span> Aufgaben für die „Kabel&quot;-Gruppen</h2>
@@ -231,7 +230,7 @@
 <p><strong>Welche zwei Anschlussmöglichkeiten (lt. Norm) haben sie für den Anschluss einer Dose?</strong></p>
 <p>TODO: Add answer</p>
 <p><strong>Wie lang darf die unverdrillte Kabelstrecke sein?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Sie muss möglichst kurz sein (max. ca. 1,5 cm) damit die Auswirkungen von Nahnebensprechen nicht überhandnehmen.</p>
 <p><strong>Überprüfen Sie mittels JPerf, wie hoch die Datenrate ihrer Verbindung ist.</strong></p>
 <p>TODO: Add result (see screenshots)</p>
 <p><strong>Weisen Sie die Qualität Ihrer Strecke messtechnisch mit dem CM 200 und dem Fluke DTX 1200 nach und dokumentieren Sie die Ergebnisse. (Benutzen Sie nicht die beigelegten kurzen blauen Kabel)</strong></p>
@@ -255,7 +254,7 @@ Dose 2:
 6-6</code></pre>
 <p>TODO: Add result (see screenshots and pictures from Felix’s phone (Misswire) and PDF: We first tried to connect it differently, so there are multiple versions)</p>
 <p><strong>Warum kann man mit CableSharing keine Gigabit-Anbindung realisieren?</strong></p>
-<p>TODO: Add answer</p>
+<p>TODO: Bei Cable-Sharing werden ungenutzte Adern für eine zweite Netzwerkverbindung verwendet. Gigabit-Ethernet benötigt aber alleine schon alle acht Adern.</p>
 <p><strong>Ihnen stehen 3 blaue Kabel zur Verfügung, die unterschiedliche Fehler aufweisen. Messen sie diese Kabel mit ihrem CM200-Messgerät durch. Dokumentieren Sie die Messergebnisse</strong></p>
 <p>TODO: Add answer (see pictures from Felix’s phone: 1: 1 &amp; 2 blinked, 2: 7 &amp; 8 blinked, 3: 6 &amp; 2 blinked and PDF)</p>
 <p><strong>Können Sie bei Verwendung von Kabel 2 mittels JPerf die Übertragungsrate messen?</strong></p>

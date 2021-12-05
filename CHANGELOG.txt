@@ -1,8 +1,189 @@
+commit fb33d7f6704df344c7b3069ce76564cc6a4c9d98
+Author: elia-wuestner <elia_wuestner@web.de>
+Date:   Sun Dec 5 22:38:40 2021 +0100
+
+    Elia Todos
+
+commit 0a01a8570dcb0a8c6a8449b4789d57a697f4533b
+Merge: 852fc70 98ac6d3
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Fri Dec 3 16:49:16 2021 +0100
+
+    Merge pull request #12 from dentremor/main
+    
+    Feat: Complete todos
+
+commit 98ac6d3c3e77e2d4835bfdfb2d76198e06331b56
+Author: dentremor <hillerdaniel11@gmail.com>
+Date:   Fri Dec 3 16:48:32 2021 +0100
+
+    Fix: Remove cursed chars
+
+commit ee110238d8f94a3710b4f0a23328e3e80dcbf308
+Author: dentremor <hillerdaniel11@gmail.com>
+Date:   Fri Dec 3 16:03:50 2021 +0100
+
+    Fix: Grammar correction
+
+commit 01e97050e7175d9c29f16082fa6ea2d2397e9610
+Author: Daniel Hiller <48788571+dentremor@users.noreply.github.com>
+Date:   Fri Dec 3 12:39:39 2021 +0100
+
+    Update versuch7-gruppe1.md
+
+commit ca9023978a7a69a06da9e2a07e9164f8ef235079
+Author: Daniel Hiller <48788571+dentremor@users.noreply.github.com>
+Date:   Fri Dec 3 12:39:01 2021 +0100
+
+    Add files via upload
+
+commit 4d1439ddf4f707816a48d64b4c73f234c67ad6cf
+Author: Daniel Hiller <48788571+dentremor@users.noreply.github.com>
+Date:   Fri Dec 3 12:38:41 2021 +0100
+
+    Add files via upload
+
+commit 852fc701a7b25f9e99467addf42e3ac30920eafe
+Merge: 036657b e6411d1
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Wed Dec 1 18:21:07 2021 +0100
+
+    Merge pull request #11 from JakWai01/main
+    
+    feat: Add documentation fundamentals
+
+commit e6411d1c571ada0f22e0c85f22c38ab94bf69d13
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Wed Dec 1 15:20:04 2021 +0100
+
+    build: Remove invalid UTF-8 byte sequence
+
+commit c9ee7d97ecd9673b84a323af9548767575675fbb
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Wed Dec 1 12:17:27 2021 +0100
+
+    feat: Add documentation
+
+commit 1d45310581ba0c21cd18f52fb7bf49aaea56b73a
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Tue Nov 30 20:25:47 2021 +0100
+
+    feat: Add some notes
+
+commit 96246baf8922ed994fd63768064cc8ddb40840f0
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Tue Nov 30 19:06:51 2021 +0100
+
+    fix: Remove leading spaces
+
+commit e7ac05cf5504ac266a05fa897949f9390ccc2c0b
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Tue Nov 30 18:09:45 2021 +0100
+
+    feat: Add terminal output
+
+commit 036657bd7ffc6f9ec425a2517329b1ee7d7e9349
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 21:40:08 2021 +0100
+
+    refactor: Remove duplications
+
+commit 7d42a13ac4b3b580c2d6b34bbdde10ba9088e81a
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 20:07:48 2021 +0100
+
+    fix: Correct typos
+
+commit 6927ef3f929ac07ff2ab339613833a0d481c4f29
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 20:04:57 2021 +0100
+
+    refactor: Add print layout
+
+commit 86cd3634a027a45456802c2127caa81953ac3cfc
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 19:40:03 2021 +0100
+
+    feat: Add section on cable tests
+
+commit 5f09e504ba05493f61633c49a039adc63b67ac60
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 19:23:45 2021 +0100
+
+    feat: Add section on wire testing
+
+commit fd21a307160df90ed25c844de73df5b64035e134
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 19:10:58 2021 +0100
+
+    feat: Add section on CableSharing
+
+commit f4e04a67ad0384e2d36330243ab698e5dcc029c2
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 18:28:05 2021 +0100
+
+    feat: Add section on cable quality tests
+
+commit 7e4511fe02caccd7db3b05b7ecb3f9a61c38e30d
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 18:20:46 2021 +0100
+
+    refactor: Scale down images for crimping
+
+commit ce0f74c43820b0a9fe16b4f541fbfb304ef52a27
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 17:25:07 2021 +0100
+
+    feat: Add notes on cabling
+
+commit efd440e8afd3834b0fd08c61b6749daef52b608e
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 17:01:51 2021 +0100
+
+    refactor: De-duplicate answers
+
+commit 278901bc7a57de527c39060925eb0e4f6e8b045a
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 16:48:19 2021 +0100
+
+    fix: Use proper filenames
+
+commit 8977c979bb981212ae0bdfd9cdc8ae6385f6f345
+Merge: 03c3d96 1442c43
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 16:39:42 2021 +0100
+
+    Merge pull request #10 from Elia-Wuestner/main
+    
+    tasks without screenshots
+
+commit 1442c4312a863efdb2f77a0d564f7abe605d5402
+Merge: dfdd8cc 03c3d96
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 16:39:36 2021 +0100
+
+    Merge branch 'main' into main
+
+commit 03c3d96a489a0e12f118441dd2ad9be244574a66
+Merge: b5bb324 12f2bc2
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Nov 29 16:36:47 2021 +0100
+
+    Merge pull request #9 from JakWai01/main
+    
+    feat: Add documentation
+
 commit dfdd8cc4bf083394d80edb9873627a2e1a57a02f
 Author: elia-wuestner <elia_wuestner@web.de>
 Date:   Sun Nov 28 12:21:53 2021 +0100
 
     tasks without screenshots
+
+commit 12f2bc25e6b08545e946c6ef3a2684b1475f3a8b
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Tue Nov 23 23:58:37 2021 +0100
+
+    feat: Add documentation
 
 commit b5bb32495415985db6e2f93a94d0837958241171
 Author: Felix Pojtinger <felix@pojtinger.com>

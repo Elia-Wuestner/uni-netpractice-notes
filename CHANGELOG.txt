@@ -1,3 +1,74 @@
+commit 05a0b449cfbeb29e291f80973317ac530586a9ba
+Merge: 28b201c 5381f88
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Dec 9 15:17:44 2021 +0100
+
+    Merge pull request #15 from JakWai01/main
+    
+    feat: Add documentation
+
+commit 5381f881ead08fce813a77abcc4b73e564605c7d
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Thu Dec 9 14:34:50 2021 +0100
+
+    feat: Add documentation
+
+commit 28b201c81454937500d1a17d793407fa36b51c23
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Dec 7 20:47:40 2021 +0100
+
+    feat: Add images of stream results
+
+commit 0dfa1019a5ca443068bbfec7b22900b8d1b4ad9a
+Merge: 2d1bc7a f199e55
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Dec 7 17:24:07 2021 +0100
+
+    Merge branch 'main' of github.com:pojntfx/uni-netpractice-notes
+
+commit 2d1bc7ab147817b8a15b0928314433bbe9e0d6c2
+Merge: f2edd78 0a01a85
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Dec 7 17:22:13 2021 +0100
+
+    Merge branch 'main' of git://github.com/dentremor/uni-netpractice-notes
+
+commit f2edd78192daff97e42ea0e6adf1a6601859041d
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Dec 7 17:22:10 2021 +0100
+
+    feat: Add initial notes on experiment 8
+
+commit f199e552c1377746d966f1a1a77a673aa55ba5d1
+Merge: 291fab1 64652dc
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Dec 6 20:33:18 2021 +0100
+
+    Merge pull request #14 from JakWai01/main
+    
+    fix: Typos and formatting
+
+commit 64652dc9b56703b70f9c7dc94840532d33971165
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Mon Dec 6 20:31:36 2021 +0100
+
+    feat: Prettify
+
+commit 070ab02cc926eb137467dceb48bd6f5b33274363
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Mon Dec 6 20:26:15 2021 +0100
+
+    fix: Typos and formatting
+
+commit 291fab1da566d7c8ed789a60fa122bed036f45f5
+Merge: 0a01a85 fb33d7f
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Dec 6 18:05:10 2021 +0100
+
+    Merge pull request #13 from Elia-Wuestner/main
+    
+    Elia Todos
+
 commit fb33d7f6704df344c7b3069ce76564cc6a4c9d98
 Author: elia-wuestner <elia_wuestner@web.de>
 Date:   Sun Dec 5 22:38:40 2021 +0100

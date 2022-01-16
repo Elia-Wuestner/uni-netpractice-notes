@@ -1,3 +1,102 @@
+commit 1943a028e7de4716a7fb1ccb24536ebc5821b3fe
+Merge: ce48eb5 bd1db4a
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Sat Jan 15 17:04:51 2022 +0100
+
+    Merge pull request #19 from JakWai01/main
+    
+    feat: Add some documentation
+
+commit bd1db4a1b33e50de8d1c5b346304b47877bfa0d3
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Sat Jan 15 15:59:33 2022 +0100
+
+    feat: Add some documentation
+
+commit ce48eb5696344d4dacd4581624da7b1d2a9ce432
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Jan 11 17:35:20 2022 +0100
+
+    feat: Add section on LibreNMS
+
+commit a2f8a0ae3fcda1f6a77944067fcdfa6dbe23e1f4
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Jan 11 16:37:58 2022 +0100
+
+    feat: Add section on Munin
+
+commit 1fed1b12ece48ae95f82edcc2723f0443e5dde26
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Jan 11 16:04:24 2022 +0100
+
+    feat: Add section on Grafana
+
+commit 4c36119a47e72868c577fe1a5784eb803039efa2
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Jan 11 15:29:12 2022 +0100
+
+    feat: Add Prometheus section
+
+commit 559bd918179ca97b7669d773feaf1c942f7e3822
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Jan 11 15:10:00 2022 +0100
+
+    feat: Add rest of switch configuration section
+
+commit 9955e55108f54fb3ab6f3045db6339106f0b853f
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Thu Jan 6 20:30:22 2022 +0100
+
+    chore: Fix formatting
+
+commit 21ae768fb7b4a9e5f20101ac44887687a0cfa9ed
+Merge: 44baada 0ed1266
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Jan 4 03:40:41 2022 +0100
+
+    Merge pull request #18 from JakWai01/main
+    
+    feat: Finish 9 TODOs
+
+commit 0ed12666a8e7bf363effda390b29c1d5e8f1eee7
+Author: JakWai01 <jakob.waibel@web.de>
+Date:   Sun Jan 2 21:52:00 2022 +0100
+
+    feat: Finish 9 TODOs
+
+commit 44baada51e1034cb8d599f5df2391f3c7e041430
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Dec 21 17:35:10 2021 +0100
+
+    feat: Add notes on Versuch 10
+
+commit 5cdc21e1deb4941808b7adb6a59b83ea2ef9ccbc
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Tue Dec 14 16:11:54 2021 +0100
+
+    feat: Add start of Versuch 9
+
+commit abb38e1d0cb2b0a3d22a48424c9c5b56c9a3f817
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Dec 13 17:44:08 2021 +0100
+
+    refactor: Add proper print formatting to Versuch 8
+
+commit bc2c040624129c3809dcc008a87d96791226c271
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Dec 13 17:11:36 2021 +0100
+
+    fix: Correct typos
+
+commit 5a10000c7a430e8fc9c536da9e64b632fe92074d
+Merge: aec8f48 eeda487
+Author: Felix Pojtinger <felix@pojtinger.com>
+Date:   Mon Dec 13 16:57:33 2021 +0100
+
+    Merge pull request #17 from Elia-Wuestner/main
+    
+    Elia Todos
+
 commit eeda487b9b4dd24912539b0ff5de62b2a13bc86d
 Author: elia-wuestner <elia_wuestner@web.de>
 Date:   Mon Dec 13 16:53:47 2021 +0100
